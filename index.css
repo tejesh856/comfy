@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kaushan+Script&family=Montserrat:wght@400;500;600;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    max-width: 100vw;
+    height: 100%;
+    
+}
+.cart-overlayer{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 4;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+.cart{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    transition: all 1s ease;
+    background-color: aliceblue;
+}
+.cart-box-1{
+    
+    display: flex;
+    flex-direction: column;
+}
+.cart-box-1 .cross{
+    font-size: 35px;
+    padding-left: 15px;
+    padding-top: 10px;
+    color: rgb(168, 168, 221);
+    cursor: pointer;
+    align-self: start;
+}
+.cart-overlayer.close{
+    visibility: visible;
+    opacity: 1;
+}
+.cart.slide{
+    right: 0;
+}
+.cart-box-1 .cart-head{
+    
+    font-family:'Kaushan Script', cursive;
+    text-transform: capitalize;
+    font-size: 25px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.cart-items{
+    flex-grow: 1;
+    width: 90%;
+    align-self:center;
+    justify-self: start;
+    margin:15px 0px;
+}
+.cart-item{
+    width:100%;
+    height:80px;
+    display: flex;
+    align-items: center;
+    
+}
+.item-detail{
+    display: flex;
+    height: 100%;
+    flex-grow: 1;
+    align-items: center;
+    
+}
+.item-detail .item-img{
+    height: 50px;
+    width: 80px;
+    margin-right: 20px;
+}
+.item-detail .item-img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 5px;
+}
+.item-content{
+    
+    height: 85%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item-name{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color:rgba(0, 0, 0, 0.61);
+}
+.item-price{
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: 3px;
+    color: rgba(0, 0, 0, 0.51);
+}
+.item-content button{
+    align-self: flex-start;
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    color: rgba(143, 143, 214, 1);
+}
+.number{
+    display: flex;
+    flex-direction: column;
+}
+.increament,.decreament{
+    color: rgb(150, 73, 10);
+    cursor: pointer;
+}
+.cart-box-2{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-self: center;
+    margin-bottom: 50px;
+}
+.cart-box-2 .total{
+    font-family: 'Kaushan Script', cursive;
+    text-transform: capitalize;
+    font-size: 35px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.cart-box-2 button{
+    margin-top: 20px;
+    padding:5px 0px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(150, 73, 10);
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
+.cart-box-2 button:hover{
+    background-color: rgb(199, 96, 12);
+    color: black;
+}
+.home{
+    background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow:0.6;
+    
+}
+.links ul{
+    flex-grow:0.2;
+    display: flex;
+    justify-content: space-between;
+    
+    
+    
+}
+.links ul li{
+    
+    list-style: none;
+}
+.links ul li a{
+    color: white;
+    font-size: 20px;
+    text-transform: capitalize;
+    transition: all 0.8s ease;
+}
+.links ul li a:hover{
+    color: rgb(150, 73, 10);
+}
+.logo{
+    
+    flex-grow:0.5;
+}
+.shop-cart-logo{
+    display: flex;
+    
+}
+.shop-cart-logo .icon{
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+}
+.shop-cart-logo .num{
+    position: relative;
+    top: -10px;
+    left: -5px;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding:0px 10px;
+    border-radius: 50%;
+    background-color: rgb(199, 96, 12);
+}
+.content-container{
+    
+    position: relative;
+    height: 100%;
+    
+    padding:50px 100px;
+    
+}
+.content{
+    
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+
+}
+.content h1{
+    color: white;
+    font-size: 90px;
+    font-family: 'Kaushan Script', cursive;
+}
+.content span{
+    color: white;
+    font-size:35px;
+}
+.content button{
+    align-self:flex-start;
+    margin-top: 30px;
+    font-size: 16px;
+    padding:10px 15px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor:pointer;
+    transition: all 0.8s ease;
+}
+.content button:hover{
+    background-color: white;
+    color: rgb(150, 73, 10);
+}
+.featuring{
+    padding-bottom: 100px;
+    
+}
+.featuring-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.featuring-container .heading{
+    margin:80px 0px;
+    margin-bottom:0px;
+}
+.featuring-container .heading span:first-child{
+    color: rgb(150, 73, 10);
+    margin-right: 15px;
+    font-size: 30px;
+}
+.featuring-container .heading span:last-child{
+    color: rgb(5, 5, 77);
+    font-size: 35px;
+    text-transform: capitalize;
+}
+.featuring-container .featuring-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 20px;
+    transform:scale(0.9,0.75);
+    
+    width: 100%;
+    
+
+}
+.featuring-container .featuring-items.repeat{
+    grid-template-columns: repeat(1,1fr);
+}
+.featuring-items .load-items{
+    width: 100%;
+    text-align: center;
+    display: none;
+    font-size: 50px;
+    margin:80px 0px;
+}
+.featuring-items .load-items.block{
+    display: block;
+}
+.featuring-items .featuring-item-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.featuring-item-1 .item-img{
+    position: relative;
+    width:100%;
+    height: 100%;
+    
+
+}
+.featuring-item-1 .item-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+
+.featuring-item-1 .item-img .img-icon{
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%,-50%);
+    transition: all 0.5s ease;
+
+}
+.img-icon .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: rgb(150, 73, 10);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.img-icon .search:hover{
+    background-color: rgb(199, 96, 12);
+}
+.img-icon .add-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 15px 10px;
+    background-color: rgb(150, 73, 10);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.img-icon .add-cart:hover{
+    background-color: rgb(199, 96, 12);
+}
+.featuring-item-1 .item-img img:hover~.img-icon{
+    visibility: visible;
+    opacity: 1;
+}
+.featuring-item-1 .item-img .img-icon:hover{
+    visibility: visible;
+    opacity: 1;
+}
+.title{
+    text-transform: capitalize;
+    color: rgb(168, 168, 221);
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.price{
+    letter-spacing: 1px;
+    color: rgb(24, 24, 92);
+    font-size: 18px;
+    font-weight: bold;
+}
+.featuring-container button{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(150, 73, 10);
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: all 0.5s ease;
+}
+.featuring-container button:hover{
+    background-color: rgb(199, 96, 12);
+    color: black;
+}
